@@ -1,0 +1,28 @@
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --mint: #00FFC6;
+}
+
+.social-icon {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  color: var(--mint);
+  scale: 1.1;
+}
+
+.btn-to-project {
+  border: 2px solid var(--mint);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-to-project:hover {
+  scale: 1.1;
+  box-shadow: 0 0 12px var(--mint);
+}
