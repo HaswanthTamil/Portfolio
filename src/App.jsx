@@ -1,8 +1,8 @@
-import { useState } from "react";
-import "./styles/App.css";
+import { useState } from "react"
+import "./styles/App.css"
 
 function App() {
-  return <></>;
+  return <></>
 }
 
-export default App;
+export default App

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# https://github.com/HaswanthTamil/Portfolio.git
+
+>>>>>>> 9edfdf7291bc1fee0bba4aba725939bc034820cf
 # Logs
 logs
 *.log
@@ -5,6 +10,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
 
 # Dependency directories
 node_modules/
@@ -22,12 +28,28 @@ dist-ssr/
 .vscode/
 !.vscode/extensions.json
 .idea/
+=======
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+>>>>>>> 9edfdf7291bc1fee0bba4aba725939bc034820cf
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 Thumbs.db
 desktop.ini
+=======
+>>>>>>> 9edfdf7291bc1fee0bba4aba725939bc034820cf
