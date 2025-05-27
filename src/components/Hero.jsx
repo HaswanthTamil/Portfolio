@@ -34,7 +34,7 @@ const Hero = () => {
         viewport={{ once: true }}
         className="w-full relative"
       >
-        <div className="w-full h-50 md:h-1 bg-transparent"></div>
+        <div className="w-full h-40 md:h-1 bg-transparent"></div>
 
         <motion.h1
           variants={fadeUp}
