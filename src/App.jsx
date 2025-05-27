@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import ParticlesBG from "./components/ParticlesBG"
 import "./index.css"
 import "./styles/App.css"
@@ -7,21 +7,19 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import Projects from "./components/Projects"
 
-const sectionsData = ["Hero", "Projects", "About", "Contact"]
-
 const App = () => {
   const sectionRefs = useRef([])
   const scrollContainerRef = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(0)
 
   // Scroll to a section
-  const scrollToIndex = (index) => {
+  const scrollToIndex = useCallback((index) => {
     const section = sectionRefs.current[index]
     if (section) {
       section.scrollIntoView({ behavior: "smooth" })
       setCurrentIndex(index)
     }
-  }
+  }, [])
 
   // Handle keyboard input
   useEffect(() => {
@@ -41,7 +39,7 @@ const App = () => {
 
     window.addEventListener("keydown", handleKey)
     return () => window.removeEventListener("keydown", handleKey)
-  }, [currentIndex])
+  }, [currentIndex, scrollToIndex])
 
   // Sync current section on manual scroll
   useEffect(() => {
@@ -50,7 +48,9 @@ const App = () => {
     const handleScroll = () => {
       const scrollPos = scrollContainer.scrollTop
       const index = sectionRefs.current.findIndex((ref) => {
-        return Math.abs(ref.offsetTop - scrollPos) < window.innerHeight / 2
+        return (
+          ref && Math.abs(ref.offsetTop - scrollPos) < window.innerHeight / 2
+        )
       })
       if (index !== -1 && index !== currentIndex) {
         setCurrentIndex(index)
@@ -74,19 +74,32 @@ const App = () => {
 
       <main className="relative z-10 text-white text-5xl">
         <div
+          ref={scrollContainerRef}
           className="h-screen w-full snap-y snap-mandatory overflow-scroll scroll-smooth"
           tabIndex={0}
         >
-          <section className="h-screen w-full snap-start">
-            <Hero />
+          <section
+            ref={(el) => (sectionRefs.current[0] = el)}
+            className="h-screen w-full snap-start"
+          >
+            <Hero scrollToIndex={scrollToIndex} />
           </section>
-          <section className="h-screen w-full snap-start">
-            <About />
-          </section>
-          <section className="h-screen w-full snap-start">
+          <section
+            ref={(el) => (sectionRefs.current[1] = el)}
+            className="h-screen w-full snap-start"
+          >
             <Projects />
           </section>
-          <section className="h-screen w-full snap-start">
+          <section
+            ref={(el) => (sectionRefs.current[2] = el)}
+            className="h-screen w-full snap-start"
+          >
+            <About />
+          </section>
+          <section
+            ref={(el) => (sectionRefs.current[3] = el)}
+            className="h-screen w-full snap-start"
+          >
             <Contact />
           </section>
         </div>

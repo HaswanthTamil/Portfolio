@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { ArrowDown } from "lucide-react"
 import { motion, useAnimation } from "framer-motion"
 import {
   staggerContainer,
@@ -15,7 +16,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 const heroParagraph =
   "mt-8 mx-6 text-xl md:text-2xl text-center md:text-left max-w-xl text-gray-300"
 
-const Hero = () => {
+const Hero = ({ scrollToIndex }) => {
   const socialControls = useAnimation()
   const mainControls = useAnimation()
 
@@ -65,11 +66,7 @@ const Hero = () => {
           <motion.button
             variants={fadeUpBtn}
             className="flex justify-center btn-to-project text-gray-300 mt-20 mx-auto md:mx-6 text-2xl font-semibold py-2 px-4 rounded-full cursor-pointer"
-            onClick={() => {
-              document
-                .getElementById("projects")
-                .scrollIntoView({ behavior: "smooth" })
-            }}
+            onClick={() => scrollToIndex(1)}
           >
             See My Work
           </motion.button>
