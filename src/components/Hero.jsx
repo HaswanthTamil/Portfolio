@@ -14,7 +14,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const heroParagraph =
-  "mt-8 mx-6 text-xl md:text-2xl text-center md:text-left max-w-xl text-gray-300"
+  "mt-8 mx-6 text-xl lg:text-2xl xl:text-4xl text-center md:text-left max-w-xl text-gray-300"
 
 const Hero = ({ scrollToIndex }) => {
   const socialControls = useAnimation()
@@ -34,13 +34,13 @@ const Hero = ({ scrollToIndex }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="w-full relative"
+          className="w-full relative px-4 md:px-6 xl:px-20 2xl:px-32"
         >
-          <div className="w-full h-40 md:h-1 bg-transparent"></div>
+          <div className="w-full h-40 md:h-1 xl:h-10 bg-transparent"></div>
 
           <motion.h1
             variants={fadeUp}
-            className="text-5xl md:text-6xl font-bold text-center md:text-left text-white my-6 mx-6"
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-10xl font-bold text-center md:text-left text-white my-6 mx-6 xl:my-8"
           >
             Haswanth Tamil
           </motion.h1>
@@ -48,24 +48,30 @@ const Hero = ({ scrollToIndex }) => {
           <motion.p
             variants={fadeLeft}
             style={{ color: "var(--mint)" }}
-            className="text-3xl text-mint md:text-4xl font-semibold text-center md:text-left my-6 mx-6"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-mint font-semibold text-center md:text-left my-6 mx-6"
           >
             Frontend Developer
           </motion.p>
 
-          <div className="h-5 md:h-1 bg-transparent"></div>
+          <div className="h-5 md:h-1 xl:h-8 bg-transparent"></div>
 
-          <motion.p variants={fadeIn} className={heroParagraph}>
+          <motion.p
+            variants={fadeIn}
+            className={`${heroParagraph} xl:max-w-4xl xl:ml-6`}
+          >
             I craft clean, animated websites that actually make people stop and
             stare.
           </motion.p>
-          <motion.p variants={fadeIn} className={heroParagraph}>
+          <motion.p
+            variants={fadeIn}
+            className={`${heroParagraph} xl:max-w-4xl xl:ml-6`}
+          >
             Scroll down to see more.
           </motion.p>
 
           <motion.button
             variants={fadeUpBtn}
-            className="flex justify-center btn-to-project text-gray-300 mt-20 mx-auto md:mx-6 text-2xl font-semibold py-2 px-4 rounded-full cursor-pointer"
+            className="flex justify-center btn-to-project text-gray-300 mt-20 mx-auto md:mx-6 text-2xl xl:text-3xl font-semibold py-2 px-6 rounded-full cursor-pointer"
             onClick={() => scrollToIndex(1)}
           >
             See My Work
@@ -95,7 +101,7 @@ const Hero = ({ scrollToIndex }) => {
 
         {/* desktop social icons */}
         <motion.div
-          className="hidden md:flex absolute top-6 right-6 space-x-8 z-20 px-4 py-6"
+          className="hidden md:flex absolute top-6 right-6 space-x-8 z-20 px-4 py-6 xl:top-10 xl:right-10"
           initial="hidden"
           animate={socialControls}
           variants={fadeInSocial}
