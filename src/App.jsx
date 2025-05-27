@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import ParticlesBG from "./components/ParticlesBG"
-import "./styles/index.css"
+import "./index.css"
 import "./styles/App.css"
 import Hero from "./components/Hero"
 import About from "./components/About"
