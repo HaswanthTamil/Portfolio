@@ -17,6 +17,15 @@ export const fadeUp = {
   },
 }
 
+export const fadeUpBtn = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeIn" },
+  },
+}
+
 export const fadeLeft = {
   hidden: { opacity: 0, x: -60 },
   visible: {
@@ -36,12 +45,27 @@ export const fadeIn = {
   },
 }
 
+// export const fadeInSocial = {
+//   hidden: {
+//     opacity: 0,
+//   },
+//   visible: {
+//     opacity: 1,
+//     transition: { duration: 0.6, ease: "easeOut" },
+//   },
+// }
+
 export const fadeInSocial = {
   hidden: {
     opacity: 0,
   },
   visible: {
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: {
+      duration: 5.4,
+      ease: "easeOut",
+      times: [0, 0.77, 1],
+    },
+    opacity: [0, 0, 1],
   },
 }
