@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import { ArrowDown } from "lucide-react"
+import React, { useEffect, useState } from "react"
 import { motion, useAnimation } from "framer-motion"
 import {
   staggerContainer,
@@ -9,14 +8,12 @@ import {
   fadeInSocial,
   fadeUpBtn,
 } from "../animations/animation"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const heroParagraph =
   "mt-8 mx-6 text-xl lg:text-2xl xl:text-4xl text-center md:text-left max-w-xl text-gray-300"
 
 const Hero = ({ scrollToIndex }) => {
+  const [isNavOpen, setIsNavOpen] = useState(false)
   const socialControls = useAnimation()
   const mainControls = useAnimation()
 
@@ -71,57 +68,28 @@ const Hero = ({ scrollToIndex }) => {
 
           <motion.button
             variants={fadeUpBtn}
-            className="flex justify-center btn-to-project text-gray-300 mt-20 mx-auto md:mx-6 text-2xl xl:text-3xl font-semibold py-2 px-6 rounded-full cursor-pointer"
-            onClick={() => scrollToIndex(1)}
+            className="flex justify-center hire-btn text-gray-300 mt-20 mx-auto md:mx-6 text-2xl xl:text-3xl font-semibold py-2 px-6 rounded-full cursor-pointer"
+            onClick={() => {
+              window.location.href = "mailto:haswanthtamilofficial@gmail.com"
+            }}
           >
-            See My Work
+            Hire Me
           </motion.button>
 
-          {/* mobile social icons */}
-          <motion.div className="flex md:hidden justify-center space-x-8 z-20 px-4 my-20 mx-4">
-            <motion.a
-              variants={fadeIn}
-              href="https://github.com/HaswanthTamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
+          <div
+            className={`nav-bar fixed top-[2.5%] right-0 h-[95%] w-60 bg-gray-900 opacity-70 text-white rounded-3xl z-40 transform transition-transform duration-300 ${
+              isNavOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          ></div>
+          <motion.div className="fixed top-6 right-6 z-50">
+            <button
+              onClick={() => setIsNavOpen(!isNavOpen)}
+              className="nav-btn flex flex-col justify-between w-10 h-8 px-2 py-2"
             >
-              <FontAwesomeIcon icon={faGithub} />
-            </motion.a>
-
-            <motion.a
-              variants={fadeIn}
-              href="mailto:haswanthtamilofficial@gmail.com"
-              className="social-icon"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </motion.a>
+              <span className="h-0.5 w-full bg-white"></span>
+              <span className="h-0.5 w-full bg-white mt-0.5"></span>
+            </button>
           </motion.div>
-        </motion.div>
-
-        {/* desktop social icons */}
-        <motion.div
-          className="hidden md:flex absolute top-6 right-6 space-x-8 z-20 px-4 py-6 xl:top-10 xl:right-10"
-          initial="hidden"
-          animate={socialControls}
-          variants={fadeInSocial}
-        >
-          <motion.a
-            variants={fadeInSocial}
-            href="https://github.com/HaswanthTamil"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.a
-            variants={fadeInSocial}
-            href="mailto:haswanthtamilofficial@gmail.com"
-            className="social-icon"
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
-          </motion.a>
         </motion.div>
       </div>
     </>

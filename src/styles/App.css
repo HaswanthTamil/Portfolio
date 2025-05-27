@@ -17,14 +17,41 @@
   scale: 1.1;
 }
 
-.btn-to-project {
+.hire-btn {
   border: 2px solid var(--mint);
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.hire-btn:hover {
+  scale: 1.1;
+  box-shadow: 0 0 8px var(--mint);
+}
+
+.nav-btn {
   transition: all 0.2s ease-in-out;
 }
 
-.btn-to-project:hover {
+.nav-btn:hover {
   scale: 1.1;
-  box-shadow: 0 0 12px var(--mint);
 }
 
+.nav-btn span {
+  border-radius: 2px;
+  height: 3px;
+}
+
+.nav-btn:hover span {
+  background-color: var(--mint);
+  box-shadow: 0 0 8px var(--mint);
+}
+
+.nav-bar {
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.nav-bar:hover {
+  border: 2px solid var(--mint);
+}
 
