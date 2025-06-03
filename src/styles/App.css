@@ -5,16 +5,7 @@
 
 :root {
   --mint: #00FFC6;
-}
-
-.social-icon {
-  color: white;
-  transition: all 0.2s ease-in-out;
-}
-
-.social-icon:hover {
-  color: var(--mint);
-  scale: 1.1;
+  --purp: #8A3FFC;
 }
 
 .hire-btn {
@@ -55,3 +46,36 @@
   border: 2px solid var(--mint);
 }
 
+/* .nav-bar a {
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+  display: inline-block;
+  transform-origin: left center;
+}
+
+.nav-bar a:hover {
+  color: var(--mint);
+  transform: scale(1.1);
+  transform: translateX(5px);
+} */
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background-color: var(--mint);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

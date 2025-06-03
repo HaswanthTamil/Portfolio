@@ -6,10 +6,12 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Projects from "./components/Projects"
+import NavBar from "./components/NavBar"
 
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
+    scrollToIndex(0)
   }, [])
   const sectionRefs = useRef([])
 
@@ -33,14 +35,14 @@ const App = () => {
         </section>
 
         <section
-          ref={(el) => (sectionRefs.current[2] = el)}
+          ref={(el) => (sectionRefs.current[1] = el)}
           className="min-h-screen w-full"
         >
           <About />
         </section>
 
         <section
-          ref={(el) => (sectionRefs.current[1] = el)}
+          ref={(el) => (sectionRefs.current[2] = el)}
           className="min-h-screen w-full"
         >
           <Projects />

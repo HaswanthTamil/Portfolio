@@ -60,12 +60,32 @@ export const fadeInSocial = {
     opacity: 0,
   },
   visible: {
-    opacity: 1,
     transition: {
       duration: 5.4,
       ease: "easeOut",
       times: [0, 0.77, 1],
     },
     opacity: [0, 0, 1],
+  },
+}
+
+export const navAnimation = {
+  hidden: {
+    x: "100%",
+    opacity: 0,
+    transition: {
+      type: "tween",
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      ease: "easeOut",
+      duration: 0.4,
+    },
   },
 }

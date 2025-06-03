@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react"
+// eslint-disable-next-line no-unused-vars
 import { motion, useAnimation } from "framer-motion"
 import {
   staggerContainer,
   fadeUp,
   fadeLeft,
   fadeIn,
-  fadeInSocial,
   fadeUpBtn,
+  navAnimation,
 } from "../animations/animation"
+import NavBar from "./NavBar"
 
 const heroParagraph =
   "mt-8 mx-6 text-xl lg:text-2xl xl:text-4xl text-center md:text-left max-w-xl text-gray-300"
@@ -44,7 +46,7 @@ const Hero = ({ scrollToIndex }) => {
 
           <motion.p
             variants={fadeLeft}
-            style={{ color: "var(--mint)" }}
+            style={{ color: "var(--purp)" }}
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-mint font-semibold text-center md:text-left my-6 mx-6"
           >
             Frontend Developer
@@ -73,14 +75,17 @@ const Hero = ({ scrollToIndex }) => {
               window.location.href = "mailto:haswanthtamilofficial@gmail.com"
             }}
           >
-            Hire Me
+            Contact Me
           </motion.button>
 
-          <div
-            className={`nav-bar fixed top-[2.5%] right-0 h-[95%] w-60 bg-gray-900 opacity-70 text-white rounded-3xl z-40 transform transition-transform duration-300 ${
-              isNavOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          ></div>
+          <motion.div
+            variants={navAnimation}
+            initial="hidden"
+            animate={isNavOpen ? "visible" : "hidden"}
+            className="nav-bar fixed top-[2.5%] right-0 h-[95%] w-60 bg-gray-900/70 text-white rounded-3xl z-40"
+          >
+            <NavBar scrollToIndex={scrollToIndex} />
+          </motion.div>
           <motion.div className="fixed top-6 right-6 z-50">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
