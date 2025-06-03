@@ -10,11 +10,11 @@ const NavBar = ({ scrollToIndex }) => {
             Home
           </a>
           <br />
-          <a className="nav-link" onClick={() => scrollToIndex(1)}>
+          <a className="nav-link" onClick={() => scrollToIndex(2)}>
             Projects
           </a>
           <br />
-          <a className="nav-link" onClick={() => scrollToIndex(2)}>
+          <a className="nav-link" onClick={() => scrollToIndex(1)}>
             About
           </a>
           <br />
