@@ -28,7 +28,7 @@ const projects = [
       "Managing team workflows, version control, and ensuring clean, maintainable code.",
       "Focused on building a tool that helps teams collaborate effortlessly.",
     ],
-    link: "https://collab-board.vercel.app/",
+    link: "https://github.com/HaswanthTamil",
   },
 ]
 
@@ -46,27 +46,29 @@ const Projects = () => {
       </h2>
 
       <div className="flex flex-col gap-14">
-        {projects.map(({ name, role, subtitle, desc }, idx) => (
+        {projects.map(({ name, role, subtitle, desc, link }, idx) => (
           <motion.div
             key={idx}
             whileHover={{ scale: 1.02 }}
             className="bg-[#111] p-8 rounded-2xl border border-[var(--purp)] shadow-md"
           >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-              <h3 className="text-2xl font-semibold text-[var(--mint)]">
-                {name}
-              </h3>
-              <span className="text-[var(--purp)] font-medium mt-2 md:mt-0">
-                {role}
-              </span>
-            </div>
-            <h4 className="text-lg text-gray-300 mb-4 italic">{subtitle}</h4>
+            <a href={link}>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                <h3 className="text-2xl font-semibold text-[var(--mint)]">
+                  {name}
+                </h3>
+                <span className="text-[var(--purp)] font-medium mt-2 md:mt-0">
+                  {role}
+                </span>
+              </div>
+              <h4 className="text-lg text-gray-300 mb-4 italic">{subtitle}</h4>
 
-            <ul className="list-disc list-inside text-gray-400 space-y-2">
-              {desc.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                {desc.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </a>
           </motion.div>
         ))}
       </div>
