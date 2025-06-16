@@ -6,17 +6,17 @@ import { link } from "framer-motion/client"
 
 const projects = [
   {
-    name: "Shopstack",
+    name: "Leddit",
     role: "Solo Project",
-    subtitle: "E-Commerce Platform",
+    subtitle: "Reddit-Lite Forum",
     desc: [
-      "Built a fully responsive e-commerce site from scratch with Next.js, React, and TailwindCSS.",
-      "Crafted UI components that adapt perfectly across devices, ensuring a smooth user experience.",
-      "Switched backend calls for browser storage to speed things up and cut complexity.",
-      "Handled everything solo: product listings, dynamic routing, cart features, and client-side state.",
-      "Used GitHub for version control and Vercel for seamless deployment.",
+      "Designed a minimalist Reddit-style platform with a clean UI and focus on text-based posts.",
+      "Built with Next.js, React, TailwindCSS, and Framer Motion for smooth UX and animations.",
+      "Implemented level-1 comment threads, ditching nested replies for simplicity and speed.",
+      "Integrated Clerk for auth and MongoDB for storing users, posts, and comments.",
+      "Full-stack MVP shipped in 3 days—handled both frontend flow and backend API routes solo.",
     ],
-    link: "https://shopstack-gray.vercel.app/",
+    link: "https://leddit-nu.vercel.app/",
   },
   {
     name: "Collab-Board",
@@ -29,6 +29,19 @@ const projects = [
       "Focused on building a tool that helps teams collaborate effortlessly.",
     ],
     link: "https://github.com/HaswanthTamil",
+  },
+  {
+    name: "Shopstack",
+    role: "Solo Project",
+    subtitle: "E-Commerce Platform",
+    desc: [
+      "Built a fully responsive e-commerce site from scratch with Next.js, React, and TailwindCSS.",
+      "Crafted UI components that adapt perfectly across devices, ensuring a smooth user experience.",
+      "Switched backend calls for browser storage to speed things up and cut complexity.",
+      "Handled everything solo: product listings, dynamic routing, cart features, and client-side state.",
+      "Used GitHub for version control and Vercel for seamless deployment.",
+    ],
+    link: "https://shopstack-gray.vercel.app/",
   },
 ]
 

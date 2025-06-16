@@ -64,8 +64,8 @@ const Contact = () => {
       </div>
 
       <a
-        href="/resume.docx"
-        download="Haswanth-Resume.docx"
+        href="/Haswanth_Resume.pdf"
+        download="Haswanth-Resume.pdf"
         className="mt-6 inline-flex items-center space-x-2 bg-[var(--purp)] text-black font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[var(--mint)] transition-colors duration-300"
       >
         <MdDownload className="text-2xl" />

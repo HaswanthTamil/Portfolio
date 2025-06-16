@@ -6,8 +6,8 @@ const skills = [
   "React",
   "Tailwind CSS",
   "Node.js",
-  "MongoDB",
-  "Express",
+  "Django",
+  "SQLite",
   "Framer Motion",
   "Postman",
   "Vercel",
@@ -27,11 +27,11 @@ const About = () => {
       </h2>
 
       <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl">
-        Hey! I’m Haswanth — a frontend-focused dev who builds smooth, minimal,
-        and bold digital experiences. I thrive on clean code, fast UIs, and a
-        sprinkle of animation magic. Currently grinding hard, mastering
-        fullstack vibes and dreaming up a future tech studio with a crew of
-        builders, creatives, and dreamers.
+        Hey! I'm Haswanth — a Fullstack dev who builds smooth, minimal, and bold
+        digital experiences. I thrive on clean code, fast UIs, and a sprinkle of
+        animation magic. Currently grinding hard, mastering fullstack vibes and
+        dreaming up a future tech studio with a crew of builders, creatives, and
+        dreamers.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">

@@ -49,7 +49,7 @@ const Hero = ({ scrollToIndex }) => {
             style={{ color: "var(--purp)" }}
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-mint font-semibold text-center md:text-left my-6 mx-6"
           >
-            Frontend Developer
+            Fullstack Developer
           </motion.p>
 
           <div className="h-5 md:h-1 xl:h-8 bg-transparent"></div>
