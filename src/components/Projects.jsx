@@ -1,9 +1,3 @@
-import React from "react"
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion"
-// eslint-disable-next-line no-unused-vars
-import { link } from "framer-motion/client"
-
 const projects = [
   {
     name: "Leddit",
@@ -47,20 +41,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true, amount: 0.5 }}
-      className="max-w-5xl mx-auto px-8 py-20"
-    >
+    <div className="max-w-5xl mx-auto px-8 py-20">
       <h2 className="text-4xl font-bold mb-12 text-gradient bg-gradient-to-r from-[var(--purp)] to-[var(--mint)] text-center bg-clip-text text-transparent">
         Projects
       </h2>
 
       <div className="flex flex-col gap-14">
         {projects.map(({ name, role, subtitle, desc, link }, idx) => (
-          <motion.div
+          <div
             key={idx}
             whileHover={{ scale: 1.02 }}
             className="bg-[#111] p-8 rounded-2xl border border-[var(--purp)] shadow-md"
@@ -82,10 +70,10 @@ const Projects = () => {
                 ))}
               </ul>
             </a>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
