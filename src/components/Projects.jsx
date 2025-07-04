@@ -63,6 +63,19 @@ const projects = [
     ],
     link: "https://wormhole-ten.vercel.app/",
   },
+  {
+    name: "Weather API",
+    role: "Solo Project",
+    subtitle: "Real time weather updates",
+    desc: [
+      "Built a sleek web app that fetches real-time weather data using the WeatherAPI.",
+      "Integrated dynamic location-based search with auto-suggestions for a smooth UX.",
+      "Displayed temperature, humidity, wind speed, and condition icons with clean UI components.",
+      "Handled API integration, error handling, and state management from scratch.",
+      "Version controlled via GitHub and deployed live using Vercel for instant access.",
+    ],
+    link: "https://www.weatherapi.com/docs/",
+  },
 ]
 
 const Projects = () => {
