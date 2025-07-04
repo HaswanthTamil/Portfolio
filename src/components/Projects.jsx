@@ -74,7 +74,7 @@ const projects = [
       "Handled API integration, error handling, and state management from scratch.",
       "Version controlled via GitHub and deployed live using Vercel for instant access.",
     ],
-    link: "https://www.weatherapi.com/docs/",
+    link: "https://weather-opal-seven.vercel.app/",
   },
 ]
 
