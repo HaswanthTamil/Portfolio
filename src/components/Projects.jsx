@@ -37,6 +37,32 @@ const projects = [
     ],
     link: "https://shopstack-gray.vercel.app/",
   },
+  {
+    name: "Globe",
+    role: "Solo Project",
+    subtitle: "3D Globe using Three.js",
+    desc: [
+      "Built an interactive 3D globe visualization using Three.js, rendered smoothly in the browser.",
+      "Implemented camera controls, lighting, and realistic Earth textures for an immersive feel.",
+      "Optimized performance for smooth interaction across devices, even on low-end hardware.",
+      "Handled all aspects solo: scene setup, animations, interaction logic, and deployment.",
+      "Used GitHub for version control and Vercel for fast and easy deployment.",
+    ],
+    link: "https://globe-woad.vercel.app/",
+  },
+  {
+    name: "Wormhole",
+    role: "Solo Project",
+    subtitle: "Wormhole simulation using Three.js",
+    desc: [
+      "Created a real-time 3D wormhole simulation using Three.js and custom shaders for a trippy space effect.",
+      "Engineered dynamic camera movements and depth visuals to mimic spatial distortion.",
+      "Used post-processing effects like fog and motion blur to enhance immersion.",
+      "Handled everything solo: geometry generation, animation logic, shader tweaking, and scene composition.",
+      "Version control via GitHub and deployed seamlessly to Vercel for live access.",
+    ],
+    link: "https://wormhole-ten.vercel.app/",
+  },
 ]
 
 const Projects = () => {
