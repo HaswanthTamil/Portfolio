@@ -1,7 +1,20 @@
 const projects = [
   {
+    name: "MRM Furniture",
+    role: "Solo Project - Freelance",
+    subtitle: "B2B Furniture Manufacturer",
+    desc: [
+      "Crafted a clean and modern landing page tailored for a B2B furniture manufacturer.",
+      "Built with HTML, JavaScript and TailwindCSS for fast, responsive performance.",
+      "Focused on sleek layout, clear product presentation, and smooth user experience.",
+      "Handled everything solo—from layout design to responsive implementation.",
+      "Delivered production-ready frontend in just 3 days as a freelance project.",
+    ],
+    link: "https://mrmfurnitures.com/",
+  },
+  {
     name: "Leddit",
-    role: "Solo Project",
+    role: "Solo Project - Personal",
     subtitle: "Reddit-Lite Forum",
     desc: [
       "Designed a minimalist Reddit-style platform with a clean UI and focus on text-based posts.",
@@ -26,7 +39,7 @@ const projects = [
   },
   {
     name: "Shopstack",
-    role: "Solo Project",
+    role: "Solo Project - Personal",
     subtitle: "E-Commerce Platform",
     desc: [
       "Built a fully responsive e-commerce site from scratch with Next.js, React, and TailwindCSS.",
