@@ -5,16 +5,16 @@ import {
   SiFramer,
   SiFigma,
   SiNodedotjs,
-  SiDjango,
+  SiSpring,
   SiPython,
   SiPostman,
   SiVercel,
   SiThreedotjs,
-  SiBlender,
+  SiCplusplus,
   SiTypescript,
+  SiKotlin,
 } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
-import { Brush } from "lucide-react"
 
 const TechStack = () => {
   return (
@@ -69,9 +69,9 @@ const TechStack = () => {
             animation: 1,
           },
           {
-            name: "Django",
-            icon: SiDjango,
-            color: "text-[#34B27F]",
+            name: "Spring Boot",
+            icon: SiSpring,
+            color: "text-[#6DB33F]",
             animation: 2,
           },
           {
@@ -103,9 +103,9 @@ const TechStack = () => {
             animation: 3,
           },
           {
-            name: "Blender",
-            icon: SiBlender,
-            color: "text-[#F5792A]",
+            name: "C/C++",
+            icon: SiCplusplus,
+            color: "text-[#00599C]",
             animation: 1,
           },
           {
@@ -115,9 +115,9 @@ const TechStack = () => {
             animation: 2,
           },
           {
-            name: "Art & Animation",
-            icon: Brush,
-            color: "text-[#FF6347]",
+            name: "Kotlin",
+            icon: SiKotlin,
+            color: "text-[#7F52FF]",
             animation: 3,
           },
         ].map(({ name, icon: Icon, color, animation }) => (
