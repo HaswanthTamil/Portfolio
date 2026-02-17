@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Mail, Globe, Instagram, Download } from "lucide-react"
-import { FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa"
-import Link from "next/link"
+import { Mail, Globe, Instagram, Download } from "lucide-react";
+import { FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -29,7 +29,7 @@ const Contact = () => {
           <FaDiscord size={26} />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/haswanthtamil?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          href="https://www.linkedin.com/in/haswanthtamil"
           aria-label="Linkedin"
           target="_blank"
           className="hover:-translate-y-3 hover:rotate-12 transition-all duration-200 ease-out p-3 hover:text-[#0077B5]"
@@ -53,7 +53,7 @@ const Contact = () => {
           <Instagram />
         </Link>
         <Link
-          href="https://bytesbrush.vercel.app/"
+          href="https://bytesbrush.in/"
           aria-label="BytesBrush"
           target="_blank"
           className="hover:-translate-y-3 hover:text-green-600 hover:rotate-12 transition-all duration-200 ease-out p-3"
@@ -76,7 +76,7 @@ const Contact = () => {
         <Download size={18} /> Download Resume
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

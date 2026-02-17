@@ -12,7 +12,12 @@ const Projects = () => {
       title: "BytesBrush",
       description:
         "Official website for BytesBrush, a tech blog and community platform.",
-      href: "https://bytesbrush.vercel.app/",
+      href: "https://bytesbrush.in",
+    },
+    {
+      title: "SideShelf",
+      description:
+        "System-wide Android overlay app in Kotlin that provides real-time clipboard history for text and images, accessible from any screen.",
     },
   ];
 
@@ -27,7 +32,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <Link
             key={index}
-            href={project.href}
+            href={project.href ? project.href : ""}
             target="_blank"
             rel="noopener noreferrer"
             className={`group ${index % 2 === 0 ? "text-left" : "text-right"}`}

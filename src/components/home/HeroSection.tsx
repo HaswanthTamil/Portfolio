@@ -7,7 +7,7 @@ const HeroSection = () => {
             Haswanth Tamil
           </h1>
           <h2 className="text-lg md:text-2xl font-medium text-white/80 mt-2 font-poppins text-right text-shadow xl:text-center">
-            Full Stack Developer
+            Web & Android Developer
           </h2>
           <div>
             <p className="text-white text-shadow text-md md:text-xl font-lexend py-10 text-center leading-10">
@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
