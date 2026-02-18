@@ -18,6 +18,7 @@ const Projects = () => {
       title: "SideShelf",
       description:
         "System-wide Android overlay app in Kotlin that provides real-time clipboard history for text and images, accessible from any screen.",
+      href: "/projects/sideshelf",
     },
   ];
 

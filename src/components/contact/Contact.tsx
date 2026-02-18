@@ -3,6 +3,7 @@
 import { Mail, Globe, Instagram, Download } from "lucide-react";
 import { FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -46,9 +47,9 @@ const Contact = () => {
         </Link>
         <Link
           href="https://instagram.com/haswanthkumar"
-          aria-label="Instagram"
           target="_blank"
-          className="hover:-translate-y-3 hover:text-pink-500 hover:rotate-12 transition-all duration-200 ease-out p-3"
+          aria-label="Instagram"
+          className="text-zinc-400 hover:text-pink-500 hover:-translate-y-3 hover:rotate-12 transition-all duration-200 ease-out p-3"
         >
           <Instagram />
         </Link>

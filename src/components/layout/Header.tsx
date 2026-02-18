@@ -1,36 +1,36 @@
 // /components/layout/Header.tsx
 
-"use client"
-import { useState, useEffect, useRef } from "react"
+"use client";
+import { useState, useEffect, useRef } from "react";
 
 const links = [
-  { short: "H", full: "Home", href: "#" },
-  { short: "A", full: "About", href: "#about" },
-  { short: "P", full: "Projects", href: "#projects" },
-  { short: "C", full: "Contact", href: "#contact" },
-]
+  { short: "H", full: "Home", href: "/" },
+  { short: "A", full: "About", href: "/#about" },
+  { short: "P", full: "Projects", href: "/#projects" },
+  { short: "C", full: "Contact", href: "/#contact" },
+];
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
-  const menuRef = useRef<HTMLDivElement | null>(null)
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setOpen(false)
+        setOpen(false);
       }
-    }
+    };
 
     if (open) {
-      document.addEventListener("mousedown", handleClickOutside)
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [open])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   return (
     <>
@@ -80,7 +80,7 @@ const Header = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
