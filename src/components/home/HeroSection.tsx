@@ -7,13 +7,13 @@ const HeroSection = () => {
             Haswanth Tamil
           </h1>
           <h2 className="text-lg md:text-2xl font-medium text-white/80 mt-2 font-poppins text-right text-shadow xl:text-center">
-            Web & Android Developer
+            Systems & Fullstack Engineer
           </h2>
           <div>
             <p className="text-white text-shadow text-md md:text-xl font-lexend py-10 text-center leading-10">
-              Turning pixels into magic.
+              Building AI runtimes, automation systems,
               <br />
-              Code is my wand.
+              and infrastructure-first software.
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ export default function ProjectCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block w-full"
+      className="block w-full transition-transform duration-200 ease-out hover:translate-x-4"
     >
       <div className="py-6 border-b border-gray-800">
         <div className="max-w-[80%] mx-auto">
